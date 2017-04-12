@@ -1,0 +1,12 @@
+provider "dnsimple" {
+  token   = "abc"
+  account = "xyz"
+}
+
+resource "dnsimple_record" "record" {
+  domain = "abc.com"
+  type   = "A"
+  name   = "abc.abc.com"
+  value  = "${element(aws_instance.web.*.public_ip, count.index)}"
+  
+}
