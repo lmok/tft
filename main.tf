@@ -22,6 +22,13 @@
 #  command = "echo LOL"
 #}
 
+variable "access_key" {}
+variable "secret_key" {}
+
+variable "region" {
+  default = "us-west-1"
+}
+
 terraform {
   backend "atlas" {
     name = "lmok/training"
