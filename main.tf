@@ -36,7 +36,7 @@ terraform {
 }
 
 variable web_count {
-  default = "2"
+  default = "3"
 }
 
 provider "aws" {
